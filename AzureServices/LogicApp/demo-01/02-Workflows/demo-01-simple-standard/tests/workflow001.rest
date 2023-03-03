@@ -1,0 +1,12 @@
+@host=http://localhost:7071
+@workflow-name=workflow001
+@shared-access-signature=QgbcvNg9J79UVCsrYQ4BKlgItKRndah4s0nRdx2S8YM
+
+### POST - sample request
+POST {{host}}/api/{{workflow-name}}/triggers/manual/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig={{shared-access-signature}}
+Content-Type: application/json
+
+{
+    "name": "Dominik",
+    "surname": "Wojciechowski"
+}

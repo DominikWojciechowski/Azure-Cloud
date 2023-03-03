@@ -1,0 +1,39 @@
+@host=http://localhost:7071
+@workflow-name=workflow002
+@shared-access-signature=xE8OZxzuL5UnsmvGqHYB-S0II8lDG2QfyzIJ-m4ma6E
+
+### POST - sample request
+POST {{host}}/api/{{workflow-name}}/triggers/manual/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig={{shared-access-signature}}
+Content-Type: application/json
+
+{
+    "name": "Dominik",
+    "surname": "Wojciechowski",
+    "repository": [
+        {
+            "type": "LAPTOP",
+            "name": "DELL Laptop XYZ"
+        },
+        {
+            "type": "PC",
+            "name": "Custom PC",
+            "description": "Intel i5-13600K, nVidia RTX 3060Ti"
+        },
+        {
+            "type": "PHONE",
+            "name": "iPhone XS"
+        },
+        {
+            "type": "PHONE",
+            "name": "Samsung Galaxy S23"
+        },
+        {
+            "type": "MOUSE",
+            "name": "Logitech XYZ"
+        },
+        {
+            "type": "HEADPHONES",
+            "name": "Bose NC700"
+        }
+    ]
+}

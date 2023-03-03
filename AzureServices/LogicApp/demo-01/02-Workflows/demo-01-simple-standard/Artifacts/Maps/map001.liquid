@@ -1,0 +1,25 @@
+{
+"name": "{{ content.name }} {{ content.surname }}",
+"devices":[
+{% for device in content.repository %}
+  {% if device.type == "PC" or device.type == "PHONE" %}
+    {
+    "type": "{{ device.type }}",
+    "name": "{{ device.name }}",
+    "description": "{{ device.description }}"
+    },
+  {% endif %}
+{% endfor %}
+],
+"hardware": [
+{% for hardware in content.repository %}
+  {% if hardware.type == "MOUSE" or hardware.type == "HEADPHONES" %}
+    {
+    "type": "{{ hardware.type }}",
+    "name": "{{ hardware.name }}",
+    "description": "{{ hardware.description }}"
+    },
+  {% endif %}
+{% endfor %}
+]
+}
