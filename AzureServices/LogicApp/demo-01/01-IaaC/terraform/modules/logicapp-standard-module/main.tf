@@ -29,6 +29,8 @@ resource "azurerm_logic_app_standard" "logic_app_standard" {
   resource_group_name             = var.resource_group_name
   tags = var.tags
 
+  version                         = "~4"
+
   name                       = var.logic_app_name
 
   app_service_plan_id        = azurerm_service_plan.app_service_plan.id
