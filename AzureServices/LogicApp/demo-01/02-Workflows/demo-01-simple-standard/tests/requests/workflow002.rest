@@ -1,6 +1,6 @@
 @host=http://localhost:7071
 @workflow-name=workflow002
-@shared-access-signature=QgbcvNg9J79UVCsrYQ4BKlgItKRndah4s0nRdx2S8YM
+@shared-access-signature=xE8OZxzuL5UnsmvGqHYB-S0II8lDG2QfyzIJ-m4ma6E
 
 ### POST - sample request
 POST {{host}}/api/{{workflow-name}}/triggers/manual/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig={{shared-access-signature}}
